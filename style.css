@@ -1,0 +1,169 @@
+/* =================
+   Table of Contents 
+
+   1. Global Styles: Global styles for my project.
+   
+   2. Typography: Styles related to text, e.g. h1, h2, p, etc.
+   
+   3. Layout: Styles related with layout, e.g. header, nav, main, section, footer, div, etc.
+   
+   5. Components: Styles related to components, e.g. buttons, etc.
+   ================= */
+
+/* =================
+   1. Global Styles 
+   ================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blkue-shadow: hsla(245, 75%, 52%, 0.1);
+  --bright--blue-hover: hsl(245, 75%, 72%);
+  --text-color-black: hsl(0, 0%, 0%);
+  --text-color-white: hsl(0, 0%, 100%);
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --very-very-pale-blue: hsla(228, 100%, 99%, 1);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-blue);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* =================
+   2. Typography 
+   ================= */
+
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.description {
+  text-align: center;
+  margin: 0;
+  padding: 1em 1.75em;
+}
+
+.plan {
+  position: relative;
+  bottom: 0.6em;
+  right: 1.5em;
+  font-weight: bold;
+}
+
+.plan::after {
+  content: '$59.99/year';
+  position: absolute;
+  left: 0;
+  top: 1.2em;
+  color: var(--desaturated-blue);
+}
+
+.link-change {
+  color: var(--bright-blue);
+}
+
+.link-change:hover,
+.link-change:focus {
+  text-decoration: none;
+  transform: scale(0.9);
+  color: var(--bright--blue-hover);
+}
+
+.cancel-order {
+  margin: 0;
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-order:hover,
+.cancel-order:focus {
+  transform: scale(0.9);
+  color: var(--text-color-black);
+}
+
+.btn-proceed-text {
+  padding: 0;
+  margin: 0;
+}
+
+/* =================
+   3. Layout 
+   ================= */
+
+.card {
+  width: 22rem;
+  background-color: var(--text-color-white);
+  border-radius: 1em;
+}
+
+.content {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-very-pale-blue);
+  border-radius: 1em;
+  padding: 0.75em;
+  width: 100%;
+}
+
+/* In order to center the svg, so that it is not cropped, I have to make a div whose background is the svg*/
+.svg-container {
+  height: 12rem;
+  background: url(./images/illustration-hero.svg) center center no-repeat;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+/* =================
+   4. Components 
+   ================= */
+
+.btn-proceed {
+  margin-top: 2em;
+  margin-bottom: 1.25em;
+  width: 100%;
+  background-color: var(--bright-blue);
+  color: white;
+  outline: none;
+  padding: 1em 2em;
+  font-size: 1em;
+  border-radius: 0.75em;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 15px 10px var(--bright-blkue-shadow);
+  cursor: pointer;
+}
+
+.btn-proceed:hover,
+.btn-proceed:focus {
+  background-color: var(--bright--blue-hover);
+}
+
+.btn-proceed:hover p,
+.btn-proceed:focus p {
+  transform: scale(0.8);
+}

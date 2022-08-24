@@ -18,6 +18,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -55,22 +57,14 @@ body {
 .description {
   text-align: center;
   margin: 0;
-  padding: 1em 1.75em;
+  padding: 1em 0.75em;
+  margin-bottom: 0.5em;
 }
 
 .plan {
+  font-size: 1rem;
   position: relative;
-  bottom: 0.6em;
-  right: 1.5em;
   font-weight: bold;
-}
-
-.plan::after {
-  content: '$59.99/year';
-  position: absolute;
-  left: 0;
-  top: 1.2em;
-  color: var(--desaturated-blue);
 }
 
 .link-change {
@@ -110,10 +104,11 @@ body {
   width: 22rem;
   background-color: var(--text-color-white);
   border-radius: 1em;
+  box-shadow: 0 15px 10px var(--bright-blkue-shadow);
 }
 
 .content {
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,6 +123,15 @@ body {
   border-radius: 1em;
   padding: 0.75em;
   width: 100%;
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -5%;
 }
 
 /* In order to center the svg, so that it is not cropped, I have to make a div whose background is the svg*/
